@@ -1,56 +1,7 @@
+/*
+ * Empty Stylesheet file.
+ */
 
 .mainFxmlClass {
 
-}
-
-.login-root {
-    -fx-background-color: #1e1e2f;
-    -fx-background-radius: 20;
-    -fx-border-radius: 20;
-}
-
-.login-title {
-    -fx-font-size: 24px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #ff4081;
-}
-
-.input-group {
-    -fx-spacing: 5;
-    -fx-pref-width: 100%;
-}
-
-.input-label {
-    -fx-text-fill: #ffffff;
-    -fx-font-size: 14px;
-}
-
-.input-field {
-    -fx-background-color: #2a2a40;
-    -fx-text-fill: #ffffff;
-    -fx-prompt-text-fill: #bbbbbb;
-    -fx-border-color: transparent;
-    -fx-background-radius: 10;
-    -fx-padding: 10;
-    -fx-font-size: 13px;
-}
-
-.input-field:focused {
-    -fx-border-color: #00bcd4;
-    -fx-border-width: 2;
-}
-
-.login-button {
-    -fx-background-color: linear-gradient(to right, #ff4081, #7c4dff);
-    -fx-text-fill: white;
-    -fx-font-weight: bold;
-    -fx-background-radius: 25;
-    -fx-font-size: 14px;
-    -fx-padding: 10 20;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.75), 8, 0.3, 0, 2);
-}
-
-.login-button:hover {
-    -fx-background-color: #ffd740;
-    -fx-text-fill: black;
 }
