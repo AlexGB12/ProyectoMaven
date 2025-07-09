@@ -1,7 +1,85 @@
-/*
- * Empty Stylesheet file.
- */
-
 .mainFxmlClass {
+    
 
+}
+
+
+.table-view {
+    -fx-background-color: #1e1e2f;
+    -fx-border-color: #ff4081;
+    -fx-border-width: 2;
+    -fx-padding: 5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-table-cell-border-color: transparent;
+}
+
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(to right, #ff4081, #7c4dff);
+    -fx-background-radius: 10 10 0 0; 
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-size: 40;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+
+.table-view .table-row-cell {
+    -fx-background-color: #2c2c3e; 
+    -fx-border-color: #3c3c50; 
+    -fx-border-width: 0 0 1 0; 
+}
+
+
+.table-view .table-row-cell:filled:selected {
+    -fx-background-color: #ffd740; 
+    -fx-text-fill: black; 
+}
+
+
+.table-view .table-cell {
+    -fx-font-size: 13px;
+    -fx-text-fill: #fefefe;
+    -fx-padding: 8 10 8 10;
+}
+
+
+.table-view .table-row-cell:hover {
+    -fx-background-color: #3f3f5f; 
+}
+
+
+
+.button.btn_perfil {
+    -fx-background-color: linear-gradient(to right, #ff4081, #7c4dff);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 20;
+    -fx-padding: 6 20 6 20;
+    -fx-effect: dropshadow(gaussian, #000000aa, 4, 0.5, 0, 2); 
+}
+
+.button.btn_perfil:hover {
+    -fx-background-color: #ffd740; 
+    -fx-text-fill: black;
+}
+
+
+
+.combo-box, .text-field {
+    -fx-background-color: #2e2e40;
+    -fx-text-fill: #fefefe;
+    -fx-border-color: #7c4dff;
+    -fx-border-radius: 5;
+    -fx-background-radius: 5;
+}
+
+.combo-box:hover, .text-field:hover {
+    -fx-border-color: #ffd740;
 }
