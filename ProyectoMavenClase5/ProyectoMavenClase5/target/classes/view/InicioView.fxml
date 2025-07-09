@@ -9,56 +9,46 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
 
-
-<VBox alignment="CENTER" prefHeight="400.0" prefWidth="600.0" spacing="20"
-      styleClass="mainFxmlClass"
-      stylesheets="@inicioview.css"
-      xmlns="http://javafx.com/javafx/23.0.1"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="org.carlosguitz.controller.InicioController">
-</VBox>
-
+<VBox alignment="CENTER" prefHeight="500" prefWidth="400" spacing="20" styleClass="login-root" stylesheets="@inicioview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.carlosguitz.controller.InicioController">
 
     <padding>
         <Insets bottom="30" left="30" right="30" top="30" />
     </padding>
 
-    <!-- Logo o ilustración -->
     <ImageView fx:id="logoImageView" fitHeight="100" fitWidth="100">
-      <image>
-         <Image url="@../image/cat.png" />
-      </image></ImageView>
+        <image>
+            <Image url="@../image/cat.png" />
+        </image>
+    </ImageView>
 
-    <!-- Título -->
     <Label styleClass="login-title" text="Bienvenido" />
 
-    <!-- Usuario -->
     <VBox spacing="5" styleClass="input-group">
         <Label contentDisplay="RIGHT" styleClass="input-label" text="Usuario">
-         <graphic>
-            <ImageView fitHeight="39.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/user.png" />
-               </image>
-            </ImageView>
-         </graphic></Label>
+            <graphic>
+                <ImageView fitHeight="39.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/user.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Label>
         <TextField fx:id="usuarioTextField" promptText="Ingrese su usuario" styleClass="input-field" />
     </VBox>
 
-    <!-- Contraseña -->
     <VBox spacing="5" styleClass="input-group">
         <Label contentDisplay="RIGHT" styleClass="input-label" text="Contraseña">
-         <graphic>
-            <ImageView fitHeight="39.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../image/lock.png" />
-               </image>
-            </ImageView>
-         </graphic></Label>
+            <graphic>
+                <ImageView fitHeight="39.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../image/lock.png" />
+                    </image>
+                </ImageView>
+            </graphic>
+        </Label>
         <PasswordField fx:id="contrasenaPasswordField" promptText="Ingrese su contraseña" styleClass="input-field" />
     </VBox>
 
-    <!-- Botón -->
     <Button fx:id="btnInicioDeSesion" onAction="#clicInicioSesion" styleClass="login-button" text="Iniciar sesión" />
 
 </VBox>
