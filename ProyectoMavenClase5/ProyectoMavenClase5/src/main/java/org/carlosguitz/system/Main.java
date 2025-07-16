@@ -18,8 +18,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage escenario) throws Exception {
-        this.escenarioPrincipal = escenario; // <--- IMPORTANTE: Asigna el escenario aquí
-        // Carga la vista inicial a través de tu método 'inicio()' para que el controlador se inicialice correctamente.
+        this.escenarioPrincipal = escenario; 
         inicio();
         escenarioPrincipal.show(); // Muestra el escenario después de cargar la escena inicial
     }
