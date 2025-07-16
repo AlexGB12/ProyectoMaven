@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="833.0" stylesheets="@vistaproductos.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.carlosguitz.controller.ProductosController">
+    <children>
+        <TableView fx:id="tablaProductos" layoutX="22.0" layoutY="31.0" prefHeight="242.0" prefWidth="779.0">
+            <columns>
+                <TableColumn fx:id="idProductoColumn" prefWidth="75.0" text="ID Producto" />
+                <TableColumn fx:id="nombreProductoColumn" prefWidth="161.0" text="Nombre" />
+                <TableColumn fx:id="descripcionProductoColumn" prefWidth="181.0" text="Descripción" />
+                <TableColumn fx:id="stockColumn" prefWidth="117.0" text="Stock" />
+                <TableColumn fx:id="precioProductoColumn" prefWidth="229.0" text="Precio" />
+            </columns>
+        </TableView>
+        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="37.0" layoutY="484.0" stroke="BLACK" strokeType="INSIDE" width="833.0" />
+        <Text layoutX="361.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Productos" />
+        <Button fx:id="btnAñadir" layoutX="42.0" layoutY="324.0" mnemonicParsing="false" onAction="#btnNuevoAction" styleClass="btn_perfil" text="Añadir" />
+        <Button fx:id="btnEliminar" layoutX="33.0" layoutY="370.0" mnemonicParsing="false" onAction="#btnEliminarAction" styleClass="btn_perfil" text="Eliminar" />
+        <Button fx:id="btnModificar" layoutX="24.0" layoutY="419.0" mnemonicParsing="false" onAction="#btnEditarAction" styleClass="btn_perfil" text="Modificar" />
+
+        <TextField fx:id="idProductoTextField" disable="true" layoutX="210.0" layoutY="287.0" />
+        <Line endX="-99.99999237060547" endY="209.20001220703125" layoutX="221.0" layoutY="273.0" startX="-100.0" />
+        <TextField fx:id="nombreProductoTextField" disable="true" layoutX="210.0" layoutY="330.0" />
+        <TextField fx:id="descripcionProductoTextField" disable="true" layoutX="212.0" layoutY="374.0" />
+        <TextField fx:id="stockTextField" disable="true" layoutX="452.0" layoutY="287.0" prefHeight="25.0" prefWidth="235.0" />
+        <TextField fx:id="precioProductoTextField" disable="true" layoutX="454.0" layoutY="330.0" prefHeight="25.0" prefWidth="235.0" />
+
+        <Label layoutX="128.0" layoutY="291.0" text="ID Producto" />
+        <Label layoutX="138.0" layoutY="334.0" text="Nombre" />
+        <Label layoutX="125.0" layoutY="378.0" text="Descripción" />
+        <Label layoutX="391.0" layoutY="291.0" text="Stock" />
+        <Label layoutX="381.0" layoutY="334.0" text="Precio" />
+        <Label layoutX="378.0" layoutY="378.0" text="Buscar" />
+
+
+        <Button layoutX="706.0" layoutY="416.0" mnemonicParsing="false" onAction="#regresarMenuPrincipal" styleClass="btn_perfil" text="MenuPrincipal" />
+        <TextField fx:id="txtBuscar" layoutX="452.0" layoutY="374.0" promptText="Buscar por Nombre" />
+        <Button fx:id="btnBuscar" layoutX="616.0" layoutY="374.0" mnemonicParsing="false" onAction="#buscarProducto" text="Buscar" />
+
+        <Button fx:id="btnAtras" layoutX="52.0" layoutY="272.0" mnemonicParsing="false" onAction="#btnAnteriorAction" styleClass="btn_perfil" text="&lt;&lt;" />
+        <Button fx:id="btnSiguiente" layoutX="711.0" layoutY="272.0" mnemonicParsing="false" onAction="#btnSiguienteAction" styleClass="btn_perfil" text="&gt;&gt;" />
+        <Button fx:id="btnCancelar" disable="true" layoutX="123.0" layoutY="444.0" mnemonicParsing="false" onAction="#btnCancelarAction" styleClass="btn_perfil" text="Cancelar" />
+        <Button fx:id="btnGuardar" disable="true" layoutX="226.0" layoutY="445.0" mnemonicParsing="false" onAction="#btnGuardarAction" styleClass="btn_perfil" text="Guardar" />
+    </children>
+</AnchorPane>
