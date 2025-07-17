@@ -6,49 +6,62 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.shape.Line?>
-<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="833.0" stylesheets="@vistaproductos.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.carlosguitz.controller.ProductosController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="995.0" styleClass="products-root" stylesheets="@vistaproductos.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.carlosguitz.controller.ProductosController">
     <children>
-        <TableView fx:id="tablaProductos" layoutX="22.0" layoutY="31.0" prefHeight="242.0" prefWidth="779.0">
+        <Text layoutX="40.0" layoutY="40.61875" styleClass="view-title" text="Gestión de Productos" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="5.399999999999999" />
+
+        <TableView fx:id="tablaProductos" layoutX="40.0" layoutY="65.4" prefHeight="250.0" prefWidth="915.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="65.4">
             <columns>
-                <TableColumn fx:id="idProductoColumn" prefWidth="75.0" text="ID Producto" />
-                <TableColumn fx:id="nombreProductoColumn" prefWidth="161.0" text="Nombre" />
-                <TableColumn fx:id="descripcionProductoColumn" prefWidth="181.0" text="Descripción" />
-                <TableColumn fx:id="stockColumn" prefWidth="117.0" text="Stock" />
-                <TableColumn fx:id="precioProductoColumn" prefWidth="229.0" text="Precio" />
+                <TableColumn fx:id="idProductoColumn" prefWidth="80.0" text="ID" />
+                <TableColumn fx:id="nombreProductoColumn" prefWidth="200.0" text="Nombre" />
+                <TableColumn fx:id="descripcionProductoColumn" prefWidth="250.0" text="Descripción" />
+                <TableColumn fx:id="stockColumn" prefWidth="100.0" text="Stock" />
+                <TableColumn fx:id="precioProductoColumn" prefWidth="150.0" text="Precio" />
+                <TableColumn fx:id="columnaAcciones" prefWidth="140.0" text="Acciones" />
             </columns>
         </TableView>
-        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="37.0" layoutY="484.0" stroke="BLACK" strokeType="INSIDE" width="833.0" />
-        <Text layoutX="361.0" layoutY="507.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Productos" />
-        <Button fx:id="btnAñadir" layoutX="42.0" layoutY="324.0" mnemonicParsing="false" onAction="#btnNuevoAction" styleClass="btn_perfil" text="Añadir" />
-        <Button fx:id="btnEliminar" layoutX="33.0" layoutY="370.0" mnemonicParsing="false" onAction="#btnEliminarAction" styleClass="btn_perfil" text="Eliminar" />
-        <Button fx:id="btnModificar" layoutX="24.0" layoutY="419.0" mnemonicParsing="false" onAction="#btnEditarAction" styleClass="btn_perfil" text="Modificar" />
 
-        <TextField fx:id="idProductoTextField" disable="true" layoutX="210.0" layoutY="287.0" />
-        <Line endX="-99.99999237060547" endY="209.20001220703125" layoutX="221.0" layoutY="273.0" startX="-100.0" />
-        <TextField fx:id="nombreProductoTextField" disable="true" layoutX="210.0" layoutY="330.0" />
-        <TextField fx:id="descripcionProductoTextField" disable="true" layoutX="212.0" layoutY="374.0" />
-        <TextField fx:id="stockTextField" disable="true" layoutX="452.0" layoutY="287.0" prefHeight="25.0" prefWidth="235.0" />
-        <TextField fx:id="precioProductoTextField" disable="true" layoutX="454.0" layoutY="330.0" prefHeight="25.0" prefWidth="235.0" />
+        <HBox alignment="CENTER" layoutX="40.0" layoutY="321.4" spacing="20.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="321.4">
+            <Button fx:id="btnAtras" onAction="#btnAnteriorAction" styleClass="nav-button" text="&lt;&lt; Anterior" />
+            <Button fx:id="btnSiguiente" onAction="#btnSiguienteAction" styleClass="nav-button" text="Siguiente &gt;&gt;" />
+        </HBox>
 
-        <Label layoutX="128.0" layoutY="291.0" text="ID Producto" />
-        <Label layoutX="138.0" layoutY="334.0" text="Nombre" />
-        <Label layoutX="125.0" layoutY="378.0" text="Descripción" />
-        <Label layoutX="391.0" layoutY="291.0" text="Stock" />
-        <Label layoutX="381.0" layoutY="334.0" text="Precio" />
-        <Label layoutX="378.0" layoutY="378.0" text="Buscar" />
+        <VBox layoutX="40.0" layoutY="379.0" prefWidth="400.0" spacing="10.0" styleClass="input-form-section" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="379.0">
+            <Label styleClass="form-label" text="ID Producto:" />
+            <TextField fx:id="idProductoTextField" disable="true" promptText="ID del producto" styleClass="form-text-field" />
+            
+            <Label styleClass="form-label" text="Nombre:" />
+            <TextField fx:id="nombreProductoTextField" disable="true" promptText="Nombre del producto" styleClass="form-text-field" />
+            
+            <Label styleClass="form-label" text="Descripción:" />
+            <TextField fx:id="descripcionProductoTextField" disable="true" promptText="Descripción del producto" styleClass="form-text-field" />
+        </VBox>
 
+        <VBox layoutX="480.0" layoutY="380.6" prefWidth="400.0" spacing="10.0" styleClass="input-form-section" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="380.6">
+            <Label styleClass="form-label" text="Stock:" />
+            <TextField fx:id="stockTextField" disable="true" promptText="Cantidad en stock" styleClass="form-text-field" />
+            
+            <Label styleClass="form-label" text="Precio:" />
+            <TextField fx:id="precioProductoTextField" disable="true" promptText="Precio unitario" styleClass="form-text-field" />
+            
+            <Label styleClass="form-label" text="Buscar Producto:" />
+            <HBox spacing="10.0">
+                <TextField fx:id="txtBuscar" promptText="Buscar por Nombre" styleClass="form-text-field" HBox.hgrow="ALWAYS" />
+                <Button fx:id="btnBuscar" onAction="#buscarProducto" styleClass="action-button" text="Buscar" />
+            </HBox>
+        </VBox>
 
-        <Button layoutX="706.0" layoutY="416.0" mnemonicParsing="false" onAction="#regresarMenuPrincipal" styleClass="btn_perfil" text="MenuPrincipal" />
-        <TextField fx:id="txtBuscar" layoutX="452.0" layoutY="374.0" promptText="Buscar por Nombre" />
-        <Button fx:id="btnBuscar" layoutX="616.0" layoutY="374.0" mnemonicParsing="false" onAction="#buscarProducto" text="Buscar" />
-
-        <Button fx:id="btnAtras" layoutX="52.0" layoutY="272.0" mnemonicParsing="false" onAction="#btnAnteriorAction" styleClass="btn_perfil" text="&lt;&lt;" />
-        <Button fx:id="btnSiguiente" layoutX="711.0" layoutY="272.0" mnemonicParsing="false" onAction="#btnSiguienteAction" styleClass="btn_perfil" text="&gt;&gt;" />
-        <Button fx:id="btnCancelar" disable="true" layoutX="123.0" layoutY="444.0" mnemonicParsing="false" onAction="#btnCancelarAction" styleClass="btn_perfil" text="Cancelar" />
-        <Button fx:id="btnGuardar" disable="true" layoutX="226.0" layoutY="445.0" mnemonicParsing="false" onAction="#btnGuardarAction" styleClass="btn_perfil" text="Guardar" />
+        <HBox alignment="CENTER" layoutX="40.0" layoutY="661.0" spacing="20.0" AnchorPane.bottomAnchor="-1.7999999999999545" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
+            <Button fx:id="btnAñadir" onAction="#btnNuevoAction" styleClass="action-button-primary" text="Añadir" />
+            <Button fx:id="btnEliminar" onAction="#btnEliminarAction" styleClass="action-button-danger" text="Eliminar" />
+            <Button fx:id="btnModificar" onAction="#btnEditarAction" styleClass="action-button-warning" text="Modificar" />
+            <Button fx:id="btnGuardar" disable="true" onAction="#btnGuardarAction" styleClass="action-button-success" text="Guardar" />
+            <Button fx:id="btnCancelar" disable="true" onAction="#btnCancelarAction" styleClass="action-button-cancel" text="Cancelar" />
+            <Button fx:id="btnRegresarMenuPrincipal" onAction="#regresarMenuPrincipal" styleClass="action-button-info" text="Menu Principal" HBox.hgrow="ALWAYS" />
+        </HBox>
     </children>
 </AnchorPane>

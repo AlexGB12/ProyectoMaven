@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="848.0" prefWidth="450.0" spacing="20" styleClass="register-root" stylesheets="@registroview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.carlosguitz.controller.RegistroController">
+
+    <padding>
+        <Insets bottom="30" left="30" right="30" top="30" />
+    </padding>
+
+    <ImageView fx:id="logoImageView" fitHeight="100" fitWidth="100">
+        <image>
+            <Image url="@image/logo%20para%20una%20venta%20.png" />
+        </image>
+    </ImageView>
+
+    <Label styleClass="register-title" text="Crear Nueva Cuenta" />
+
+    <VBox spacing="5" styleClass="input-group">
+        <Label contentDisplay="RIGHT" styleClass="input-label" text="Nombre Completo">
+            <graphic>
+                <ImageView fitHeight="39.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@image/user.png" /> </image>
+                </ImageView>
+            </graphic>
+        </Label>
+        <TextField fx:id="nombreTextField" promptText="Ingrese su nombre completo" styleClass="input-field" />
+    </VBox>
+
+    <VBox spacing="5" styleClass="input-group">
+        <Label contentDisplay="RIGHT" styleClass="input-label" text="Correo Electrónico">
+            <graphic>
+                <ImageView fitHeight="39.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@image/email.png" /> </image>
+                </ImageView>
+            </graphic>
+        </Label>
+        <TextField fx:id="correoTextField" promptText="Ingrese su correo electrónico" styleClass="input-field" />
+    </VBox>
+
+    <VBox spacing="5" styleClass="input-group">
+        <Label contentDisplay="RIGHT" styleClass="input-label" text="Nombre de Usuario">
+            <graphic>
+                <ImageView fitHeight="39.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@image/user.png" /> </image>
+                </ImageView>
+            </graphic>
+        </Label>
+        <TextField fx:id="usuarioTextField" promptText="Elija un nombre de usuario" styleClass="input-field" />
+    </VBox>
+
+    <VBox spacing="5" styleClass="input-group">
+        <Label contentDisplay="RIGHT" styleClass="input-label" text="Contraseña">
+            <graphic>
+                <ImageView fitHeight="39.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@image/lock.png" /> </image>
+                </ImageView>
+            </graphic>
+        </Label>
+        <PasswordField fx:id="contrasenaPasswordField" promptText="Cree una contraseña segura" styleClass="input-field" />
+    </VBox>
+
+    <VBox spacing="5" styleClass="input-group">
+        <Label contentDisplay="RIGHT" styleClass="input-label" text="Confirmar Contraseña">
+            <graphic>
+                <ImageView fitHeight="39.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@image/lock.png" /> </image>
+                </ImageView>
+            </graphic>
+        </Label>
+        <PasswordField fx:id="confirmarContrasenaPasswordField" promptText="Repita su contraseña" styleClass="input-field" />
+    </VBox>
+
+    <Button fx:id="btnInicioDeSesion" onAction="#clicInicioSesion" styleClass="register-button" text="Registrarse" />
+
+    <Button fx:id="btnCancelar" onAction="#Regresar" styleClass="cancel-button" text="Cancelar" />
+
+</VBox>

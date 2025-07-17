@@ -1,6 +1,8 @@
-org\carlosguitz\system\Main.class
 org\carlosguitz\model\Producto.class
-org\carlosguitz\controller\ProductosController$Operacion.class
+org\carlosguitz\controller\PrincipalViewController.class
 org\carlosguitz\controller\ProductosController.class
 org\carlosguitz\controller\InicioController.class
+org\carlosguitz\system\Main.class
+org\carlosguitz\controller\ProductosController$Operacion.class
+org\carlosguitz\controller\RegistroController.class
 org\carlosguitz\db\Conexion.class

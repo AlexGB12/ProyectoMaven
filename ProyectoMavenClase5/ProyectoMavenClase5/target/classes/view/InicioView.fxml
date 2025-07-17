@@ -9,7 +9,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" prefHeight="500" prefWidth="400" spacing="20" styleClass="login-root" stylesheets="@inicioview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.carlosguitz.controller.InicioController">
+<VBox alignment="CENTER" prefHeight="500.0" prefWidth="404.0" spacing="20" styleClass="login-root" stylesheets="@inicioview.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.carlosguitz.controller.InicioController">
 
     <padding>
         <Insets bottom="30" left="30" right="30" top="30" />
@@ -17,7 +17,7 @@
 
     <ImageView fx:id="logoImageView" fitHeight="100" fitWidth="100">
         <image>
-            <Image url="@../image/cat.png" />
+            <Image url="@image/logo%20para%20una%20venta%20.png" />
         </image>
     </ImageView>
 
@@ -28,7 +28,7 @@
             <graphic>
                 <ImageView fitHeight="39.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../image/user.png" />
+                        <Image url="@image/user.png" />
                     </image>
                 </ImageView>
             </graphic>
@@ -41,7 +41,7 @@
             <graphic>
                 <ImageView fitHeight="39.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../image/lock.png" />
+                        <Image url="@image/lock.png" />
                     </image>
                 </ImageView>
             </graphic>
@@ -50,5 +50,7 @@
     </VBox>
 
     <Button fx:id="btnInicioDeSesion" onAction="#clicInicioSesion" styleClass="login-button" text="Iniciar sesión" />
+
+    <Button fx:id="btnIrARegistro" onAction="#IrARegistro" styleClass="login-button" text="¿No tienes cuenta? Regístrate aquí" />
 
 </VBox>
