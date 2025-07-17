@@ -11,15 +11,15 @@ import org.carlosguitz.system.Main;
 /**
  * FXML Controller class
  *
- * @author informatica
+ * @author alexg
  */
-public class InicioController implements Initializable {
+public class RegistroController implements Initializable {
 
     @FXML
     private Button btnInicioDeSesion;
     @FXML
-    private Button btnIrARegistro;
-
+    private Button btnCancelar;
+    
     private Main principal;
 
     public void setPrincipal(Main principal) {
@@ -28,20 +28,22 @@ public class InicioController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        // TODO
     }
 
     @FXML
     public void clicInicioSesion(ActionEvent evento) {
         if (evento.getSource() == btnInicioDeSesion) {
-            principal.mostrarProductos(); // Use the new method name
+            principal.mostrarProductos();
 
         }
     }
 
     @FXML
-    public void IrARegistro(ActionEvent evento) {
-        if (evento.getSource() == btnIrARegistro) {
-            principal.Registrarte();
+    public void Regresar(ActionEvent evento) {
+        if (evento.getSource() == btnCancelar) {
+            principal.inicio();
+
         }
     }
 
