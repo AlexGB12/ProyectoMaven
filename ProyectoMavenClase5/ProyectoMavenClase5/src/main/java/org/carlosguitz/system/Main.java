@@ -9,8 +9,9 @@ import javafx.stage.Stage;
 import org.carlosguitz.controller.*;
 
 public class Main extends Application {
+
     private static String URL_VIEW = "/view/";
-    private Stage escenarioPrincipal; // Declara la instancia de Stage
+    private Stage escenarioPrincipal; 
 
     public static void main(String[] args) {
         launch(args);
@@ -18,9 +19,9 @@ public class Main extends Application {
 
     @Override
     public void start(Stage escenario) throws Exception {
-        this.escenarioPrincipal = escenario; 
+        this.escenarioPrincipal = escenario;
         inicio();
-        escenarioPrincipal.show(); // Muestra el escenario después de cargar la escena inicial
+        escenarioPrincipal.show(); 
     }
 
     public FXMLLoader cambiarEscena(String fxml, double ancho, double alto) {
@@ -30,7 +31,7 @@ public class Main extends Application {
             Parent archivoFXML = cargadorFXML.load();
             Scene escena = new Scene(archivoFXML, ancho, alto);
             escenarioPrincipal.setScene(escena);
-            // No necesitas escenarioPrincipal.show() aquí, solo en el start.
+ 
         } catch (IOException ex) {
             System.out.println("Error al cambiar: " + ex.getMessage());
             ex.printStackTrace();
@@ -39,15 +40,23 @@ public class Main extends Application {
     }
 
     public void inicio() {
-        // En este caso, ya estamos en el inicio, así que cargamos InicioView.fxml
-        // Este método asegura que la referencia 'principal' se pase al controlador
-        InicioController ic = cambiarEscena("InicioView.fxml", 400, 500).getController();
+
+        PrincipalViewController ic = cambiarEscena("PrincipalView.fxml", 800, 600).getController();
         ic.setPrincipal(this);
     }
 
-    // Sugerencia: Cambia el nombre de este método a algo como 'mostrarProductos'
-    public void mostrarProductos() { // <-- Renombrado para ser más idiomático
-        ProductosController vvc = cambiarEscena("VistaProductos.fxml", 833, 492).getController(); // <--- Asegúrate de usar ".fxml"
+    public void mostrarProductos() {
+        ProductosController vvc = cambiarEscena("VistaProductos.fxml", 1000, 700).getController();
         vvc.setPrincipal(this);
+    }
+
+    public void iniciarSesion() {
+        InicioController vc = cambiarEscena("inicioView.fxml", 404, 500).getController();
+        vc.setPrincipal(this);
+    }
+
+    public void Registrarte() {
+        RegistroController c = cambiarEscena("RegistroView.fxml", 450, 848).getController();
+        c.setPrincipal(this);
     }
 }

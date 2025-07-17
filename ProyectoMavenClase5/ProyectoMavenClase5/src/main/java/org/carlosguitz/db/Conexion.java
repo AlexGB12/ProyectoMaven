@@ -22,7 +22,7 @@ public class Conexion {
 
     private void conectar() {
         try {
-            // Carga el driver JDBC (asegúrate de tener el conector MySQL en tu pom.xml)
+
             Class.forName(DRIVER);
             conexion = DriverManager.getConnection(URL, USER, PASSWORD);
             System.out.println("Conexión exitosa a ProyectoNovaWearDB");
@@ -31,18 +31,18 @@ public class Conexion {
             e.printStackTrace();
         } catch (SQLException e) {
             System.err.println("Error al conectar a la base de datos: " + e.getMessage());
-            // Imprime un mensaje más específico si el error es por credenciales incorrectas o DB no existente
-            if (e.getSQLState().startsWith("28") || e.getSQLState().startsWith("08")) { // SQLState para auth o conexión
+
+            if (e.getSQLState().startsWith("28") || e.getSQLState().startsWith("08")) { 
                 System.err.println("Verifica el nombre de la base de datos, el usuario y la contraseña.");
             }
             e.printStackTrace();
-        } catch (Exception e) { // Captura otras posibles excepciones generales
+        } catch (Exception e) { 
             System.err.println("Error inesperado al conectar: " + e.getMessage());
             e.printStackTrace();
         }
     }
 
-    public static Conexion getInstance() { // Renombrado a 'getInstance' para consistencia
+    public static Conexion getInstance() { 
         if (instancia == null) {
             instancia = new Conexion();
         }
@@ -51,7 +51,7 @@ public class Conexion {
 
     public Connection getConexion() {
         try {
-            // Reconecta si la conexión es nula o está cerrada
+
             if (conexion == null || conexion.isClosed()) {
                 conectar();
             }
@@ -62,7 +62,7 @@ public class Conexion {
         return conexion;
     }
 
-    // Opcional: un método para cerrar explícitamente la conexión
+
     public void desconectar() {
         try {
             if (conexion != null && !conexion.isClosed()) {
