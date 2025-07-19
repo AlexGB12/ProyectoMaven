@@ -9,9 +9,8 @@ public class Conexion {
     private static Conexion instancia;
     private Connection conexion;
 
-
-    private static final String URL = "jdbc:mysql://127.0.0.1:3306/ProyectoNovaWearDB?useSSL=false"; 
-    private static final String USER = "quintom"; // <-- Cambia "root" si tu usuario es diferente
+    private static final String URL = "jdbc:mysql://localhost:3306/ProyectoNovaWearDB2?useSSL=false"; 
+    private static final String USER = "root"; // <-- Cambia "root" si tu usuario es diferente
     private static final String PASSWORD = "admin"; // <-- Cambia "admin" si tu contraseña es diferente
 
     private static final String DRIVER = "com.mysql.jdbc.Driver"; // Usar el driver moderno de MySQL

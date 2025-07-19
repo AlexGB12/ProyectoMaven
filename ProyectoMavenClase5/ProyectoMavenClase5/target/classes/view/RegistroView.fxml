@@ -83,7 +83,7 @@
         <PasswordField fx:id="confirmarContrasenaPasswordField" promptText="Repita su contraseña" styleClass="input-field" />
     </VBox>
 
-    <Button fx:id="btnInicioDeSesion" onAction="#clicInicioSesion" styleClass="register-button" text="Registrarse" />
+    <Button fx:id="btnRegistrar" onAction="#handleRegistrar" styleClass="register-button" text="Registrarse" />
 
     <Button fx:id="btnCancelar" onAction="#Regresar" styleClass="cancel-button" text="Cancelar" />
 

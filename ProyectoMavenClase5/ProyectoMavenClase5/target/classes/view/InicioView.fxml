@@ -33,7 +33,7 @@
                 </ImageView>
             </graphic>
         </Label>
-        <TextField fx:id="usuarioTextField" promptText="Ingrese su usuario" styleClass="input-field" />
+        <TextField fx:id="txtUsuarioLogin" promptText="Ingrese su usuario" styleClass="input-field" />
     </VBox>
 
     <VBox spacing="5" styleClass="input-group">
@@ -46,7 +46,7 @@
                 </ImageView>
             </graphic>
         </Label>
-        <PasswordField fx:id="contrasenaPasswordField" promptText="Ingrese su contraseña" styleClass="input-field" />
+        <PasswordField fx:id="pfContrasenaLogin" promptText="Ingrese su contraseña" styleClass="input-field" />
     </VBox>
 
     <Button fx:id="btnInicioDeSesion" onAction="#clicInicioSesion" styleClass="login-button" text="Iniciar sesión" />

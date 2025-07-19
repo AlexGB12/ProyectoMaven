@@ -51,7 +51,7 @@ public class Main extends Application {
     }
 
     public void iniciarSesion() {
-        InicioController vc = cambiarEscena("inicioView.fxml", 404, 500).getController();
+        InicioController vc = cambiarEscena("InicioView.fxml", 404, 500).getController();
         vc.setPrincipal(this);
     }
 
