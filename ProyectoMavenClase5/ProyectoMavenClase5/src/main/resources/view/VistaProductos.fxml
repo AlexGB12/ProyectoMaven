@@ -51,17 +51,17 @@
             <Label styleClass="form-label" text="Buscar Producto:" />
             <HBox spacing="10.0">
                 <TextField fx:id="txtBuscar" promptText="Buscar por Nombre" styleClass="form-text-field" HBox.hgrow="ALWAYS" />
-                <Button fx:id="btnBuscar" onAction="#buscarProducto" styleClass="action-button" text="Buscar" />
+                <Button fx:id="btnBuscar" onAction="#buscarProducto" styleClass="action-button-primary" text="Buscar" />
             </HBox>
         </VBox>
 
         <HBox alignment="CENTER" layoutX="40.0" layoutY="661.0" spacing="20.0" AnchorPane.bottomAnchor="-1.7999999999999545" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="40.0">
             <Button fx:id="btnAñadir" onAction="#btnNuevoAction" styleClass="action-button-primary" text="Añadir" />
-            <Button fx:id="btnEliminar" onAction="#btnEliminarAction" styleClass="action-button-danger" text="Eliminar" />
-            <Button fx:id="btnModificar" onAction="#btnEditarAction" styleClass="action-button-warning" text="Modificar" />
-            <Button fx:id="btnGuardar" disable="true" onAction="#btnGuardarAction" styleClass="action-button-success" text="Guardar" />
-            <Button fx:id="btnCancelar" disable="true" onAction="#btnCancelarAction" styleClass="action-button-cancel" text="Cancelar" />
-            <Button fx:id="btnRegresarMenuPrincipal" onAction="#regresarMenuPrincipal" styleClass="action-button-info" text="Menu Principal" HBox.hgrow="ALWAYS" />
+            <Button fx:id="btnEliminar" onAction="#btnEliminarAction" styleClass="action-button-primary" text="Eliminar" />
+            <Button fx:id="btnModificar" onAction="#btnEditarAction" styleClass="action-button-primary" text="Modificar" />
+            <Button fx:id="btnGuardar" disable="true" onAction="#btnGuardarAction" styleClass="action-button-primary" text="Guardar" />
+            <Button fx:id="btnCancelar" disable="true" onAction="#btnCancelarAction" styleClass="action-button-primary" text="Cancelar" />
+            <Button fx:id="btnRegresarMenuPrincipal" onAction="#regresarMenuPrincipal" styleClass="action-button-primary" text="Menu Principal" HBox.hgrow="ALWAYS" />
         </HBox>
     </children>
 </AnchorPane>
